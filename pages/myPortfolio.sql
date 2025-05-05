@@ -75,6 +75,18 @@ INSERT INTO `profile` (`id`, `pagetitle`, `logo`, `metadescription`, `fullname`,
 (1, 'Jeel Faldu - Personal Portfolio', 'assets/images/logo.gif', NULL, 'Jeel Faldu', 'Web developer', ' I am a skilled web developer with over 2 years of professional experience. My expertise lies in creating engaging and user-friendly portfolio websites that showcase my clients\' talents and achievements effectively. With a strong command of HTML, CSS, JavaScript, and various web development frameworks, I have successfully delivered visually stunning and responsive websites. I am passionate about staying updated with the latest industry trends and incorporating innovative technologies to provide my clients with cutting-edge solutions. As a result-oriented developer, I strive to create seamless user experiences while emphasizing clean code and optimal performance.', 'faldujeel@gmaill.com', 'Mar 31, 2000', '+918866378055', 'Junagadh, Gujarat, India', NULL, NULL, NULL);
 
 --
+-- Table structure for table `affiliate_links`
+--
+
+CREATE TABLE `affiliate_links` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `link` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
 -- Indexes for dumped tables
 --
 
@@ -105,6 +117,11 @@ ALTER TABLE `contact`
 --
 ALTER TABLE `profile`
   MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `affiliate_links`
+--
+ALTER TABLE `affiliate_links` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
